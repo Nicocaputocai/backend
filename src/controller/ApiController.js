@@ -28,23 +28,23 @@ module.exports = {
             //},
             remote:{
                 clubes:{
-                    datos: 'https://apilanus.divisioncode.net.ar/api/club',
-                    documentacion:'https://apilanus.divisioncode.net.ar/api/club/doc'},
+                    datos: 'https://api.desarrolloi.org/api/club',
+                    documentacion:'https://api.desarrolloi.org/api/club/doc'},
                 Educacion: {
-                    datos:'https://apilanus.divisioncode.net.ar/api/education',
-                    documentacion:'https://apilanus.divisioncode.net.ar/api/education/doc'
+                    datos:'https://api.desarrolloi.org/api/education',
+                    documentacion:'https://api.desarrolloi.org/api/education/doc'
             },
                 salud:{
-                    datos: 'https://apilanus.divisioncode.net.ar/api/health',
-                    documentacion:'https://apilanus.divisioncode.net.ar/api/health/doc'
+                    datos: 'https://api.desarrolloi.org/api/health',
+                    documentacion:'https://api.desarrolloi.org/api/health/doc'
                 },
                 seguridad:{ 
-                    datos:'https://apilanus.divisioncode.net.ar/api/security',
-                    documentacion:'https://apilanus.divisioncode.net.ar/api/security/doc'
+                    datos:'https://api.desarrolloi.org/api/security',
+                    documentacion:'https://api.desarrolloi.org/api/security/doc'
             },
                 transporte:{
-                    datos:'https://apilanus.divisioncode.net.ar/api/transport',
-                    documentacion:'https://apilanus.divisioncode.net.ar/api/transport/doc'
+                    datos:'https://api.desarrolloi.org/api/transport',
+                    documentacion:'https://api.desarrolloi.org/api/transport/doc'
                 }
             }
            
