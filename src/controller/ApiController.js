@@ -29,22 +29,17 @@ module.exports = {
             remote:{
                 clubes:{
                     datos: 'https://api.desarrolloi.org/api/club',
-                    documentacion:'https://api.desarrolloi.org/api/club/doc'},
                 Educacion: {
                     datos:'https://api.desarrolloi.org/api/education',
-                    documentacion:'https://api.desarrolloi.org/api/education/doc'
             },
                 salud:{
                     datos: 'https://api.desarrolloi.org/api/health',
-                    documentacion:'https://api.desarrolloi.org/api/health/doc'
                 },
                 seguridad:{ 
                     datos:'https://api.desarrolloi.org/api/security',
-                    documentacion:'https://api.desarrolloi.org/api/security/doc'
             },
                 transporte:{
                     datos:'https://api.desarrolloi.org/api/transport',
-                    documentacion:'https://api.desarrolloi.org/api/transport/doc'
                 }
             }
            
