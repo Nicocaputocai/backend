@@ -14,6 +14,8 @@ const Health = require('./routes/health.js');
 const Security = require('./routes/security.js');
 const Transport = require('./routes/transport.js');
 const MunicipalDependence = require('./routes/municipalDep.js')
+const SquarePark = require('./routes/square&park')
+
 App.use(bodyParser.json())
 App.use(bodyParser.urlencoded({extended: true})) //Si va a haber formularios en este servidor tiene que ir true
 App.use(express.static(__dirname + '/public'));
@@ -22,6 +24,7 @@ App.use('/api/club', Club)
 App.use('/api/education', Education)
 App.use('/api/health', Health)
 App.use('/api/security', Security)
+App.use('/api/square-park', SquarePark)
 App.use('/api/transport', Transport)
 App.use('/api/municipalDependence', MunicipalDependence)
 
