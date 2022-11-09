@@ -33,6 +33,9 @@ module.exports = {
           Educacion: {
             datos: "https://api.desarrolloi.org/api/education",
           },
+          "Dependencias Municipales": {
+            datos: "https://api.desarrolloi.org/api/municipalDependence",
+          },
           "Plazas y Parques":{
             datos:"https://api.desarrolloi.org/api/square-park"
           },
