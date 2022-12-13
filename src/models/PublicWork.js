@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const SquareParkSchema = new mongoose.Schema({
+const PublicWokrSchema = new mongoose.Schema({
     type:{
         type: String,
         default: "Feature"
@@ -10,29 +10,24 @@ const SquareParkSchema = new mongoose.Schema({
             type: String,
             required:true
         },
-        address:{
+        description:{
             type:String,
             required:true,
             
         },
-        area:{
-            type: Number,
-            required:false
-        },
-        centroid:{
-            type:[Number],
-            required:false,
-            index:"2dsphere"
+        status:{
+            type: String,
+            required:true
         }
     },
     geometry:{
         type:{
             type: String,
             required: true,
-            default: "Polygon"
+            default: "Point"
         },
         coordinates:{
-            type:[[[Number]]],
+            type:[Number],
             required:true,
             index:"2dsphere"
         }
@@ -41,6 +36,6 @@ const SquareParkSchema = new mongoose.Schema({
     timestamps: true
 });
 
-const SquarePark = mongoose.model('square&parks', SquareParkSchema)
+const PublicWork = mongoose.model('PublicWork', PublicWokrSchema)
 
-module.exports = SquarePark
+module.exports = PublicWork

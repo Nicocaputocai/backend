@@ -36,6 +36,9 @@ module.exports = {
           "Dependencias Municipales": {
             datos: "https://api.desarrolloi.org/api/municipalDependence",
           },
+          "Obra pública nacional en Lanús":{
+            datos: "https://api.desarrolloi.org/api/publicWork",
+          },
           "Plazas y Parques":{
             datos:"https://api.desarrolloi.org/api/square-park"
           },

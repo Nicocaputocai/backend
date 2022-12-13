@@ -15,6 +15,7 @@ const Security = require('./routes/security.js');
 const Transport = require('./routes/transport.js');
 const MunicipalDependence = require('./routes/municipalDep.js')
 const SquarePark = require('./routes/square&park')
+const PublicWork = require('./routes/publicWork.js')
 
 App.use(bodyParser.json())
 App.use(bodyParser.urlencoded({extended: true})) //Si va a haber formularios en este servidor tiene que ir true
@@ -27,5 +28,6 @@ App.use('/api/security', Security)
 App.use('/api/square-park', SquarePark)
 App.use('/api/transport', Transport)
 App.use('/api/municipalDependence', MunicipalDependence)
+App.use('/api/publicWork', PublicWork)
 
 module.exports = App

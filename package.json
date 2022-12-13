@@ -1,13 +1,13 @@
 {
   "name": "lanusinteligente",
   "version": "1.0.0",
-  "description": "API para carga de GEOJson",
+  "description": "BACKEND DE LANUS INTELIGENTE - DESARROLLO I",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon"
   },
-  "author": "Nicolas Caputo",
+  "author": "The Division Code",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
