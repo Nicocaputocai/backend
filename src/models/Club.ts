@@ -1,6 +1,7 @@
-const mongoose = require('mongoose');
+import {Schema, model} from "mongoose";
 
-const ClubSchema = new mongoose.Schema({
+//El modelo es exactamente igual a js
+const ClubSchema = new Schema({
     type:{
         type: String,
         default: "Feature"
@@ -30,11 +31,9 @@ const ClubSchema = new mongoose.Schema({
             required:true,
             index:"2dsphere"
         }
-    }    
+    }
 }, {
     timestamps: true
 });
 
-const Club = mongoose.model('Club', ClubSchema)
-
-module.exports = Club
+export const Club = model('Club', ClubSchema)
