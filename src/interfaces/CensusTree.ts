@@ -1,8 +1,14 @@
 //La interface define como se debe ver un dato, por ejemplo, cualquier instancia u objeto de Club debe cumplir con las siguientes propiedades
 interface Properties {
-    name: string;
+    idTree: string;
     address: string;
-    height: string;
+    location: string;
+    neightboardhood: string;
+    leafImg: string;
+    profileImg:string;
+    status: number;
+    fallingDanger: boolean;
+    true: boolean;
 }
 
 interface Geometry {
@@ -10,7 +16,7 @@ interface Geometry {
     coordinates: number[];
 }
 
-export interface ClubInterface {
+export interface CensusTreeInterface {
     type: String | "Feature";
     properties: Properties;
     geometry: Geometry

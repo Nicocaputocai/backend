@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors'
-import clubRouter from './routes/club';
+import clubRouter from './routes/censusTree';
 const Api = require('./routes/Api.js');
 const Education = require('./routes/education.js');
 const Health = require('./routes/health.js');
