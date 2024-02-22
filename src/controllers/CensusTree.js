@@ -16,7 +16,8 @@ module.exports ={
         
         const data ={
             properties:{
-                idTree:req.body.idTree,
+                // idTree:req.body.idTree,
+                tree: req.body.tree,
                 address: req.body.address,
                 neightboardhood: req.body.neightboardhood,
                 leafImg: (req.files[0])?req.files[0].filename: "",

@@ -7,11 +7,15 @@ const CensusTreeSchema = new mongoose.mongoose.Schema(
       default: "Feature",
     },
     properties: {
-      idTree: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: REF.TREE,
+    //   idTree: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: REF.TREE,
+    //     required: true,
+    //   },
+    tree:{
+        type: String,
         required: true,
-      },
+    },
       address: {
         type: String,
         required: true,
