@@ -22,7 +22,9 @@ module.exports ={
                 leafImg: (req.files[0])?req.files[0].filename: "",
                 profileImg: (req.files[0])?req.files[0].filename: "",
                 generalStatus: req.body.generalStatus,
-                fallingDanger: req.body.fallingDanger
+                fallingDanger: req.body.fallingDanger,
+                inclination: req.body.inclination,
+                diameter: req.body.diameter
             },
             geometry:{
                 type: "Point",
