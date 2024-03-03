@@ -6,8 +6,12 @@ const cors = require('cors');
 const Api = require('./routes/Api.js');
 const Trees = require('./routes/trees.js')
 const CensusTree = require("./routes/censusTree.js")
-
-App.use(cors());
+const corsOptions ={
+    methods: 'GET, POST, PUT',
+    allowedHeaders: 'Content-Type,Authorization',
+    exposedHeaders: 'Content-Range,X-Content- Range'
+}
+// App.use(cors());
 App.use(bodyParser.json());
 App.use(bodyParser.urlencoded({extended: true}));
 App.use(express.static(__dirname + '/public'));
