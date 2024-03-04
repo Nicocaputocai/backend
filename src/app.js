@@ -11,7 +11,7 @@ const corsOptions ={
     allowedHeaders: 'Content-Type,Authorization',
     exposedHeaders: 'Content-Range,X-Content- Range'
 }
-// App.use(cors());
+App.use(cors({corsOptions}));
 App.use(bodyParser.json());
 App.use(bodyParser.urlencoded({extended: true}));
 App.use(express.static(__dirname + '/public'));
