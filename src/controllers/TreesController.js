@@ -24,5 +24,18 @@ module.exports = {
         newTree.save()
         .then(Trees => res.status(201).send({Trees}))
         .catch(err => res.status(500).send({err}))
+    },
+    getNativeTrees: function(req, res) {
+        Trees.find({ native: true }).sort({ scientificName: 1 })
+            .then(nativeTrees => {
+                if (nativeTrees.length != 0) {
+                    nativeTrees.forEach(tree => {
+                        tree.scientificName = tree.scientificName.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                    });
+                    return res.status(200).send(nativeTrees);
+                }
+                return res.status(204).send({ message: "No hay árboles nativos cargados aún" });
+            })
+            .catch(err => res.status(500).send({ err }));
     }
 }
