@@ -36,5 +36,13 @@ module.exports ={
         newTree.save()
         .then(CensusTree => res.status(201).send({CensusTree}))
         .catch(err => res.status(500).send({err}))
+    },
+    getUniqueTrees: function(req, res) {
+        CensusTree.distinct("properties.tree")
+            .then(uniqueTrees => {
+                if (uniqueTrees.length != 0) return res.status(200).send(uniqueTrees);
+                return res.status(204).send({ message: "No hay árboles únicos censados aún" });
+            })
+            .catch(err => res.status(500).send({ err }));
     }
 };
