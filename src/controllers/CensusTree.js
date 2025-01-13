@@ -18,12 +18,11 @@ module.exports = {
     console.log(req.files);
     const data = {
       properties: {
-        // idTree:req.body.idTree,
         tree: req.body.tree,
         address: req.body.address,
         neightboardhood: req.body.neightboardhood,
-        leafImg: req.files[0] ? req.files[0].filename : "",
-        profileImg: req.files[1] ? req.files[1].filename : "",
+        leafImg: req.files.leafImg ? req.files.leafImg[0].filename : "", // Cambiado
+        profileImg: req.files.profileImg ? req.files.profileImg[0].filename : "", // Cambiado
         damagedTrunk: req.body.damagedTrunk,
         fallingDanger: req.body.fallingDanger,
         inclination: req.body.inclination,
