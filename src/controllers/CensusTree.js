@@ -41,6 +41,7 @@ module.exports = {
       },
     };
     const newTree = new CensusTree(data);
+    console.log(req.body)
     newTree
       .save()
       .then((CensusTree) => res.status(201).send({ CensusTree }))
