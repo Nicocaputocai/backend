@@ -22,7 +22,7 @@ module.exports = {
         address: req.body.address,
         neightboardhood: req.body.neightboardhood,
         leafImg: req.files.leafImg ? req.files.leafImg[0].filename : "", // Cambiado
-        profileImg: req.files.profileImg ? req.files.profileImg[0].filename : "", // Cambiado
+        profileImg: req.files.profileImg? req.files.profileImg[0].filename: "", // Cambiado
         damagedTrunk: req.body.damagedTrunk,
         fallingDanger: req.body.fallingDanger,
         inclination: req.body.inclination,
@@ -41,11 +41,16 @@ module.exports = {
       },
     };
     const newTree = new CensusTree(data);
-    console.log(req.body)
+    console.log(req.body);
     newTree
       .save()
       .then((CensusTree) => res.status(201).send({ CensusTree }))
-      .catch((err) => res.status(500).send({ err }));
+      .catch((err) => {
+        console.error(err); // Ver el error completo en la consola
+        res
+          .status(500)
+          .send({ error: "Error al guardar el árbol.", details: err });
+      });
   },
   getUniqueTrees: function (req, res) {
     CensusTree.distinct("properties.tree")
